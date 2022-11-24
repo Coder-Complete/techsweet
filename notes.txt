@@ -1,1 +1,5 @@
 https://worldvectorlogo.com/downloaded/postgresql
+
+TODO'S
+
+- template html to fill relative urls (css, other pages) before deploying and allowing me to have local files for when i'm developing
