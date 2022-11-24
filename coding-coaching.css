@@ -2,27 +2,116 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  --main-color: #769cf0;
+  --blue: #769cf0;
+  --pink: #ff8fe1;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  background-color: white;
+  color: black;
 }
 
 header {
+  /* height: 60px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 0px 15px; */
-  /* height: 60px; */
   position: fixed;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   width: 100%;
   z-index: 1;
 }
 
+.logo-text {
+  color: black;
+}
+
+.logo p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+}
+
 .header--navlink {
   margin: 8px;
+  color: black;
+}
+
+.header--navlink a {
+  color: black;
+}
+
+.header--navlink a:hover {
+  opacity: 0.5;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+}
+
+.apply {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: var(--blue);
+  max-width: 150px;
+  text-align: center;
+  color: white;
+}
+
+.apply a {
+  color: white;
+}
+
+.apply:hover {
+  background-color: #618eef;
+  transform: scale(1.05);
+}
+
+header p {
+  position: relative;
+}
+
+.top-right {
+  position: absolute;
+  top: 0px;
+  right: -15px;
+  font-size: 10px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+section:nth-child(odd) {
+  background-color: rgb(239, 239, 239);
+  color: black;
+  width: 100%;
+}
+
+h1 {
+  margin: 15px;
+  font-size: 50px;
+  text-align: center;
+}
+
+h2 {
+  margin: 15px;
+  font-size: 30px;
+  text-align: center;
 }
 
 .cover-photo {
@@ -30,16 +119,155 @@ header {
 }
 
 .logo {
-  width: 100%;
+  /* width: 100%; */
   height: 60px;
   z-index: 1;
-  position: absolute;
+  /* position: absolute;
   top: 0;
-  left: 0;
-  background-color: black;
-  opacity: 0.5;
+  left: 0; */
+  /* background-color: white; */
+  /* opacity: 0.5; */
+  /* padding: 0px 8px; */
+}
+
+.logo p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo img {
+  margin-right: 5px;
+  width: 60px;
 }
 
 img {
   height: 100%;
+}
+
+#testimonials {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.testimonials--main {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial {
+  height: 100%;
+  min-width: 300px;
+  max-width: 400px;
+  background: linear-gradient(var(--pink), var(--blue));
+  border-radius: 15px;
+  padding: 40px;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: rgb(255, 255, 255);
+}
+
+.testimonial--photo {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial--description {
+  text-align: center;
+  overflow: scroll;
+  flex-grow: 1;
+}
+
+.arrows {
+  display: flex;
+  justify-content: center;
+}
+
+.arrow {
+  background-color: black;
+  border-radius: 50%;
+  margin: 10px;
+  height: 40px;
+  width: 40px;
+}
+
+.arrow:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+.arrow > img {
+  z-index: 1;
+  filter: brightness(0) invert(1);
+}
+
+.progress-bar-container {
+  width: 75%;
+  height: 50px;
+  overflow-x: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.progress-bar-container::-webkit-scrollbar {
+  display: none;
+}
+
+.progress-bar {
+  width: 200vw;
+  height: 2px;
+  /* background-color: green; */
+  color: black;
+  position: relative;
+}
+
+.gray-filled {
+  width: 100%;
+  height: 100%;
+  background-color: lightgray;
+}
+
+.filled {
+  width: 0%;
+  height: 100%;
+  background-image: linear-gradient(to right, var(--blue), var(--pink));
+  z-index: 1;
+  position: absolute;
+}
+
+.milestones {
+  width: 100%;
+  position: relative;
+}
+
+.milestone {
+  width: 25px;
+  height: 25px;
+  background-color: var(--blue);
+  border: 3px solid var(--pink);
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  top: -13px;
+}
+
+.inactive {
+  background-color: gray;
+  border: 3px solid lightgray;
+}
+
+.display-text {
+  width: 50%;
+  text-align: center;
 }
