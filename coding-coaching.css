@@ -49,11 +49,6 @@ header {
   opacity: 0.5;
 }
 
-ul {
-  display: flex;
-  align-items: center;
-}
-
 .apply {
   padding: 8px 12px;
   border-radius: 8px;
@@ -146,7 +141,7 @@ img {
 #testimonials {
   display: flex;
   justify-content: center;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .testimonials--main {
@@ -154,16 +149,21 @@ img {
   flex-grow: 1;
   display: flex;
   justify-content: center;
+  /* transform: translateX(100%);  */
+  /* Animation start out of the screen */
+  /* Add the animation */
+  /* animation: marquee 30s linear infinite */
+  /* infinite make reapeat the animation indefinitely */
 }
 
 .testimonial {
   height: 100%;
-  min-width: 300px;
+  min-width: 400px;
   max-width: 400px;
   background: linear-gradient(var(--pink), var(--blue));
   border-radius: 15px;
   padding: 40px;
-  margin: 15px;
+  margin: 0px 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -179,11 +179,31 @@ img {
   object-fit: cover;
 }
 
+.testimonial--name {
+  color: rgb(241, 241, 241);
+}
+
 .testimonial--description {
   text-align: center;
   overflow: scroll;
   flex-grow: 1;
 }
+
+/* Create the animation */
+/* @keyframes move {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+} */
 
 .arrows {
   display: flex;
@@ -270,4 +290,95 @@ img {
 .display-text {
   width: 50%;
   text-align: center;
+}
+
+/* .section__main { */
+/* display: flex; */
+/* } */
+
+.section__main img {
+  width: 50%;
+  /* display: inline-block; */
+  float: left;
+  margin: 0px 15px 0 30px;
+}
+
+/* https://codepen.io/KhaledPen/pen/YzXeXLm */
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0;
+}
+
+.space-holder {
+  position: relative;
+  width: 100%;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.horizontal {
+  position: absolute;
+  height: 100%;
+  will-change: transform;
+}
+
+.cards {
+  position: relative;
+  height: 100%;
+  padding: 0 0 0 15px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sample-card {
+  position: relative;
+  height: 100px;
+  width: 500px;
+  background-color: #111f30;
+  margin-right: 75px;
+  flex-shrink: 0;
+}
+
+.sample-card:last-child {
+  margin-right: 0;
+}
+
+/* https://codepen.io/springerkc/pen/aMxxyO */
+div.highway-slider div.highway-barrier {
+  overflow: hidden;
+  position: relative;
+}
+div.highway-slider ul.highway-lane {
+  display: flex;
+  height: 100%;
+}
+
+div.highway-slider ul.highway-lane li.highway-car {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: #fff; */
+  color: #343434;
+}
+
+@keyframes translateinfinite {
+  100% {
+    transform: translateX(calc(-180px * 12));
+  }
+}
+
+#infinite div.highway-barrier ul.highway-lane {
+  animation: translateinfinite 50s linear infinite;
 }

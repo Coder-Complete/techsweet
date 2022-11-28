@@ -1851,13 +1851,13 @@ video {
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
 }
 
-.text-\[\#336699\]\/\[\.35\] {
-  color: rgb(51 102 153 / .35);
-}
-
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+
+.text-\[\#336699\]\/\[\.35\] {
+  color: rgb(51 102 153 / .35);
 }
 
 .underline {
@@ -2207,6 +2207,11 @@ header {
   color: white;
 }
 
+.header--navlinks {
+  display: flex;
+  align-items: center;
+}
+
 .header--navlink {
   margin: 8px;
 }
@@ -2295,10 +2300,6 @@ a {
   height: 60px;
   min-width: 50px;
   margin-right: 15px;
-}
-
-ul {
-  display: flex;
 }
 
 li > a > img {
