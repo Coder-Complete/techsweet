@@ -92,8 +92,10 @@ section {
 }
 
 section:nth-child(odd) {
-  background-color: rgb(239, 239, 239);
-  color: black;
+  background-color: var(--light-blue);
+  /* background-color: rgb(239, 239, 239); */
+  /* color: black; */
+  color: var(--darkest-blue);
   width: 100%;
 }
 
@@ -201,11 +203,6 @@ img {
   flex-grow: 1;
   display: flex;
   justify-content: center;
-  /* transform: translateX(100%);  */
-  /* Animation start out of the screen */
-  /* Add the animation */
-  /* animation: marquee 30s linear infinite */
-  /* infinite make reapeat the animation indefinitely */
 }
 
 .testimonial {
@@ -240,22 +237,6 @@ img {
   overflow: scroll;
   flex-grow: 1;
 }
-
-/* Create the animation */
-/* @keyframes move {
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-} */
 
 .arrows {
   display: flex;
@@ -344,13 +325,8 @@ img {
   text-align: center;
 }
 
-/* .instructor__main { */
-/* display: flex; */
-/* } */
-
 .instructor__main img {
   width: 50%;
-  /* display: inline-block; */
   float: left;
   margin: 0px 15px 0 30px;
 }
@@ -443,7 +419,6 @@ div.highway-slider ul.highway-lane li.highway-car {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background: #fff; */
   color: #343434;
 }
 
@@ -461,4 +436,29 @@ div.highway-slider ul.highway-lane li.highway-car {
   .header--navlink:not(:last-child) {
     display: none;
   }
+}
+
+.flippers {
+  padding: 0;
+  margin: 0;
+  /* background-image: linear-gradient(to top right, var(--blue), var(--pink)); */
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.flip-card {
+  margin: 0;
+  flex-grow: 1;
+  border: 5px solid rgb(224 231 255);
+}
+
+.flip-card-front {
+  background-image: linear-gradient(
+    to top right,
+    var(--blue),
+    var(--light-pink)
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }

@@ -6,8 +6,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  --light-blue: #b0c4ff67;
   --blue: #769cf0;
+  --darkest-blue: #000550;
+  --light-pink: #ffbbed;
   --pink: #ff8fe1;
+  --dark-pink: #fa39c7;
+  --darker-pink: #a20077;
+  --darkest-pink: rgb(101, 2, 75);
 }
 
 html {
@@ -132,12 +138,12 @@ li > a > img {
 }
 
 .flippers {
-  width: 100%;
+  /* width: 100%; */
   /* height: 400px; */
-  flex-grow: 1;
-  overflow-y: auto;
-  /* background-color: rgb(57, 57, 57); */
-  display: flex;
+  /* flex-grow: 1; */
+  /* overflow-y: auto; */
+  /* background-image: linear-gradient(to top right, var(--blue), var(--pink)); */
+  display: inline-flex;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -146,7 +152,8 @@ li > a > img {
   width: 300px;
   height: 300px;
   margin: 8px;
-  background-color: rgb(132, 132, 132);
+  /* background-color: transparent; */
+  /* background-color: rgb(132, 132, 132); */
   color: black;
   display: flex;
   justify-content: center;
@@ -154,7 +161,7 @@ li > a > img {
 }
 
 .purple-button {
-  background-color: #fa39c7;
+  background-color: var(--dark-pink);
   padding: 12px 20px;
   border-radius: 8px;
   text-align: center;
@@ -173,7 +180,7 @@ footer {
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
-  background-color: transparent;
+  /* background-color: transparent; */
   width: 300px;
   height: 300px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
@@ -201,6 +208,7 @@ footer {
   position: absolute;
   width: 100%;
   height: 100%;
+  padding: 15px;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
   display: flex;
@@ -211,7 +219,6 @@ footer {
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #bbb;
   color: black;
   font-size: 24px;
   padding: 16px;
@@ -219,9 +226,14 @@ footer {
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
+  background-color: var(--blue);
   color: white;
   transform: rotateY(180deg);
+}
+
+.us {
+  color: var(--darkest-pink);
+  font-weight: 600;
 }
 
 .stack {
