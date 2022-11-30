@@ -143,7 +143,7 @@ const numMilestones = milestonesData.length;
 // window.onscroll = () => {
 //   const scrollPadding = 60;
 //   const pathSectionBounds = document
-//     .querySelector("#the-path")
+//     .querySelector("#path")
 //     .getBoundingClientRect();
 //   const topOfPathSection = pathSectionBounds.top;
 //   // const bottomOfPathSection = pathSectionBounds.bottom;
@@ -169,7 +169,7 @@ function calcDynamicHeight(ref) {
   const vw = window.innerWidth;
   const vh = window.innerHeight;
   const objectWidth = ref.scrollWidth;
-  return objectWidth - vw + vh + 15; // 15 is the padding (in pixels) desired on the right side of the .cards container. This can be set to whatever your styles dictate
+  return objectWidth - vw + vh + 150; // 150 is the padding (in pixels) desired on the right side of the .cards container. This can be set to whatever your styles dictate
 }
 
 window.addEventListener("scroll", () => {
@@ -182,25 +182,25 @@ window.addEventListener("resize", () => {
 });
 
 /* loop testimonials */
-const testimonialData = [
-  {
-    image: "assets/ryan.jpg",
-    name: "Ryan M.",
-    text: "Working with Jared has really helped me learn to code. The flexibility of his program is a huge benefit as he keeps you moving forward without feeling pressured to move on before you have a good grasp of things. Another thing I really appreciate about Jared is that he’s always available to help with concepts or even specific debugging or coding problems. It is a huge asset when learning to have someone you can contact and ask specific questions and you know they’ll get back to you within a few hours at most. The layout and pace of the program is very good but the availability is incredibly beneficial and valuable. I know I wouldn’t be where I am on my programming journey without the help Jared has provided.",
-  },
-  {
-    image: "assets/vy.jpeg",
-    name: "Vy T.",
-    text: " Enrolling into Jared’s program is the best investment I have made so far. I always wanted to switch my career to technology, but I just really didn’t know where to start, and Jared gave me a very clear path that has worked out perfectly while I am still able to maintain my full time job. Even after only a couple weeks into the program I already saw the difference in my coding skill. With his knowledge, support and passion in teaching, I do believe I will achieve my goal very fast and I would love to recommend Jared to anyone who is seeking a technology career.",
-  },
-  {
-    image: "assets/yana.jpeg",
-    name: "Yana P.",
-    text: " Jared is great. I was in doubt if I should start this new career path but he was so helpful and was able to answer all my questions. I’m enjoying working with him and he is very encouraging. Would highly recommend him to everyone!",
-  },
-  {
-    image: "assets/dee.jpeg",
-    name: "Dee H.",
-    text: "Meeting Jared was nothing less than a miracle for me! I was stumped for months, and he went above and beyond to help. What started off as an introductory meeting turned out to be the sign I had been asking for as a beginner, that I was on the right track and to not give up! He was informative, inquisitive, and so patient with me while I tried to explain to him my situation. I loved working with Jared and definitely recommend you do too.",
-  },
-];
+// const testimonialData = [
+//   {
+//     image: "assets/ryan.jpg",
+//     name: "Ryan M.",
+//     text: "Working with Jared has really helped me learn to code. The flexibility of his program is a huge benefit as he keeps you moving forward without feeling pressured to move on before you have a good grasp of things. Another thing I really appreciate about Jared is that he’s always available to help with concepts or even specific debugging or coding problems. It is a huge asset when learning to have someone you can contact and ask specific questions and you know they’ll get back to you within a few hours at most. The layout and pace of the program is very good but the availability is incredibly beneficial and valuable. I know I wouldn’t be where I am on my programming journey without the help Jared has provided.",
+//   },
+//   {
+//     image: "assets/vy.jpeg",
+//     name: "Vy T.",
+//     text: " Enrolling into Jared’s program is the best investment I have made so far. I always wanted to switch my career to technology, but I just really didn’t know where to start, and Jared gave me a very clear path that has worked out perfectly while I am still able to maintain my full time job. Even after only a couple weeks into the program I already saw the difference in my coding skill. With his knowledge, support and passion in teaching, I do believe I will achieve my goal very fast and I would love to recommend Jared to anyone who is seeking a technology career.",
+//   },
+//   {
+//     image: "assets/yana.jpeg",
+//     name: "Yana P.",
+//     text: " Jared is great. I was in doubt if I should start this new career path but he was so helpful and was able to answer all my questions. I’m enjoying working with him and he is very encouraging. Would highly recommend him to everyone!",
+//   },
+//   {
+//     image: "assets/dee.jpeg",
+//     name: "Dee H.",
+//     text: "Meeting Jared was nothing less than a miracle for me! I was stumped for months, and he went above and beyond to help. What started off as an introductory meeting turned out to be the sign I had been asking for as a beginner, that I was on the right track and to not give up! He was informative, inquisitive, and so patient with me while I tried to explain to him my situation. I loved working with Jared and definitely recommend you do too.",
+//   },
+// ];
